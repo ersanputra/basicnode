@@ -1,0 +1,2 @@
+# basicnode
+latihan node
