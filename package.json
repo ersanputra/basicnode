@@ -1,0 +1,22 @@
+{
+  "name": "basicnode",
+  "version": "1.0.0",
+  "description": "latihannode",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ersanputra/basicnode.git"
+  },
+  "keywords": [
+    "\"Node\""
+  ],
+  "author": "ersancakra@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ersanputra/basicnode/issues"
+  },
+  "homepage": "https://github.com/ersanputra/basicnode#readme"
+}
