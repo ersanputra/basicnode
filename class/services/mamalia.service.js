@@ -8,6 +8,19 @@ class MamaliaService {
     getSuara() {
         this.mamaliaModel.suaraAnimal();
     }
+
+    async getAll() {
+        return await this.mamaliaModel.findAll();
+    }
+
+    async store(body) {
+        if (body.type == "Mamalia") {
+            const mamalia = new Mamalia(body.name, body.type, body.habitat);
+            await this.mamaliaModel.save(body);
+        } else {
+            console.log("Maaf Hewan Bukan Mamalia!");
+        }
+    }
 }
 
 module.exports = MamaliaService

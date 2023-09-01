@@ -1,7 +1,7 @@
 const MamaliaService = require("../services/mamalia.service");
 
 class MamaliaController {
-    constructor () {
+    constructor() {
         this.mamaliaService = new MamaliaService();
     }
 
@@ -9,6 +9,13 @@ class MamaliaController {
         this.mamaliaService.getSuara();
     }
 
+    async getAll() {
+        return await this.mamaliaService.getAll();
+    }
+
+    async store(body) {
+        await this.mamaliaService.store(body);
+    }
 }
 
 
