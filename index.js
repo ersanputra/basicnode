@@ -21,20 +21,19 @@ const server = http.createServer(async(req, res) => {
             requestBody += chunk;
             });
 
-            req.on('end', async () => {
-            try {
-                const jsonData = JSON.parse(requestBody);
-                
-                await mamaliaController.store(jsonData);
-
-                res.writeHead(200, { 'Content-Type': 'text/plain' });
-                res.end("Mamalia Berhasil Ditambahkan");
-            } catch (error) {
-                res.writeHead(400, { 'Content-Type': 'text/plain' });
-                res.end('Error parsing JSON data');
-            }
-            });
+            req.on("end", async () => {
+                try {
+                  const jsonData = JSON.parse(requestBody);
+                  await mamaliaController.store(jsonData);
+                  res.writeHead(200, { "Content-Type": "text/plain" });
+                  res.end("Mamalia Berhasil Ditambahkan");
+                } catch (error) {
+                  res.writeHead(400, { "Content-Type": "text/plain" });
+                  res.end(error.message);
+                }
+              });
             break;
+
 
         default:
             break;

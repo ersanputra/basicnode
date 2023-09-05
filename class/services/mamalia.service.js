@@ -18,7 +18,7 @@ class MamaliaService {
             const mamalia = new Mamalia(body.name, body.type, body.habitat);
             await this.mamaliaModel.save(body);
         } else {
-            console.log("Maaf Hewan Bukan Mamalia!");
+            throw new Error("Hewan yang diinput bukan mamalia");
         }
     }
 }
